@@ -1,0 +1,66 @@
+@import url(//db.onlinewebfonts.com/c/f8e803a2e2168069e9418084ceb1aad0?family=Junegull);
+$bp: 640px;
+$text: rgb(255, 112, 177);
+$bg:#ffb6b5;
+
+html,
+body,
+.App {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  background-color: $bg;
+}
+.App {
+  padding: 3rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.App-logoWrap {
+  height: 0;
+  overflow: hidden;
+  padding-top: 100%;
+  position: relative;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.h1 {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 0;
+  font-size: 3rem;
+  color: $text;
+  font-weight: 500;
+  font-family: "junegull", sans-serif;
+  text-shadow: -1px 0 $bg, -2px 0 $text;
+  letter-spacing: 1px;
+}
+@media (max-width: $bp) {
+  .mobileHidden {
+    display: none;
+  }
+}
+
+@media (min-width: $bp + 1) {
+  .mobileShown {
+    display: none;
+  }
+  .h1 {
+    font-size: 4rem;
+    margin-top: 0;
+  }
+  .App-logoWrap {
+    padding-top: 31.3892264%
+  }
+}
